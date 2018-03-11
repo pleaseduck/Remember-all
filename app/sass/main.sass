@@ -290,6 +290,12 @@ html.mm-opened
 .mm-panels > .mm-hasnavbar
 		right: -18px
 
+// Сервисы
+
+$colors: $blue-color, $red-color, $accent
+@for $i from 1 through length($colors)
+	.carousel-services .owl-item:nth-child(#{length($colors)}n + #{$i})
+		background-color: nth($colors, $i)
 
 .img-responsive
 	display: block
