@@ -87,6 +87,20 @@ body
 		background-color: darken($accent, 5%)
 		&::after
 			opacity: .32
+	&.button-white
+		background-color: #fff
+		color: $btn-text-color
+		&::after
+			background-color: rgba(#000, .6)
+			&:hover
+				&::after
+					background-color: rgba(#000, .2)
+			&:active
+				&::after
+					background-color: rgba(#000, .4)
+		&:hover
+			background-color: darken(#fff, 5%)
+
 // Шапка
 .site-header
 	min-height: 700px
@@ -296,6 +310,85 @@ $colors: $blue-color, $red-color, $accent
 @for $i from 1 through length($colors)
 	.carousel-services .owl-item:nth-child(#{length($colors)}n + #{$i})
 		background-color: nth($colors, $i)
+
+.carousel-services
+	height: 100vh
+	&-item
+		color: #fff
+		font-size: 18px
+		font-weight: 300
+		position: relative
+		display: flex
+		flex-direction: column-reverse
+		&:hover
+			.carousel-services-image
+				opacity: 1
+		.carousel-logo
+			text-align: center
+			img
+				width: 100px
+				height: auto
+				display: inline-block
+	&-content
+		display: flex
+		position: relative
+		padding: 60px 10%
+
+	&-composition
+		text-align: center
+		width: 100%
+		.h3
+			font-weight: 800
+			font-size: 28px
+			margin-top: 5px
+			margin-bottom: 20px
+			span
+				font-weight: normal
+				font-size: 18px
+				font-weight: 300
+				display: block
+	&-list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		margin-bottom: 25px
+		li
+			padding: 9px
+			border-bottom: 1px solid rgba(#000, .12)
+			&:last-child
+				border-bottom: none
+			strong
+				font-family: firasans, sans-serif
+				color: $text-color-grey
+				.fas
+					font-size: 14px
+					margin-left: 5px
+
+	.owl-item:nth-child(2n+2)
+		.carousel-services-item
+			flex-direction: column
+	&-image
+		background-size: cover
+		background-position: center
+		opacity: .7
+		transition: opacity .5s ease
+.owl-nav
+	position: absolute
+	top: 0
+	width: 100%
+	> div
+		position: absolute
+		width: 64px
+		height: 64px
+		font-size: 26px
+		color: $text-color-grey
+		background: #fff
+		text-align: center
+		line-height: 64px
+		&.owl-next
+			right: 0
+
+
 
 .img-responsive
 	display: block

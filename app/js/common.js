@@ -15,6 +15,12 @@ $(function() {
     $('.hamburger').removeClass('is-active')
   });
 
+  $(".carousel-services").on('initialized.owl.carousel', function () {
+    setTimeout(function () {
+      carouselService()
+    }, 100);
+  });
+
   $(".carousel-services").owlCarousel({
     loop: true,
     nav: true,
@@ -34,4 +40,20 @@ $(function() {
     }
   });
 
+
+  function carouselService() {
+    $('.carousel-services-item').each(function () {
+      var ths = $(this),
+          thsHeight = ths.find('.carousel-services-content').outerHeight();
+      ths.find('.carousel-services-image').css('min-height', thsHeight)
+    });
+  };
+  //Resize Window
+  function onResize() {
+      $('.carousel-services-content').equalHeights();
+  };
+  onResize();
+  window.onresize = function () {
+    onResize();
+  }
 });
