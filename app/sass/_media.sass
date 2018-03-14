@@ -17,25 +17,43 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	.header-composition
+  .header-composition
     .welcome
       .h1
         font-size: 49px
 
+  .ug-slider-wrapper
+    right: 0 !important
+    width: 100% !important
 
+  .ug-gallery-wrapper .ug-slider-wrapper
+    right: 0 !important
+    width: 100% !important
+    margin-right: 0 !important
+
+  .ug-slider-wrapper .ug-item-wrapper
+    width: 100% !important
+
+  .s-call
+    background-size: cover
+    &::before
+      width: 100%
+    .callback
+      padding: 12% 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	.header-contacts
+  .header-contacts
     .phone
       text-align: left
 
-.button
-  padding: 12px 40px
+  .button
+    padding: 12px 40px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	.header-composition
+  .header-composition
     .welcome
       .h1
         font-size: 30px
@@ -50,7 +68,7 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	.header-composition
+  .header-composition
     .welcome
       .h1
         font-size: 29px

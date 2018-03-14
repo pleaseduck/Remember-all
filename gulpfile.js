@@ -32,6 +32,8 @@ gulp.task('scripts', ['common-js'], function() {
 		'app/libs/fotorama/fotorama.js',
 		'app/libs/selectize/js/standalone/selectize.min.js',
 		'app/libs/equalHeights/equalheights.js',
+		'app/libs/unitegallery-master/dist/js/unitegallery.min.js',
+		'app/libs/unitegallery-master/dist/themes/default/ug-theme-default.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
