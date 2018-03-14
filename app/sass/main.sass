@@ -159,6 +159,7 @@ section
 			right: 0
 			padding-top: 0
 			padding-bottom: 0
+			z-index: 10
 			.hamburger-box
 				width: 34px
 				height: 22px
@@ -201,8 +202,19 @@ section
 				left: 14%
 				right: 14%
 				top: 8px
-			&:hover
+			&:hover, &:focus
 				color: $accent
+				&::before
+					color: $accent
+			&::before
+				position: absolute
+				font-family: fontawesome
+				content: "\f219"
+				left: 40px
+				font-size: 12px
+				color: #fff
+				transition: color .5s ease
+				top: 8px
 		&.active
 			& > a
 				color: $accent
@@ -681,6 +693,100 @@ select
 		.owl-next
 			right: -60px
 
+// Подвал
+
+.main-footer
+	background-color: #242424
+	padding: 3% 0
+	color: #fff
+	font-size: 14px
+
+.footer-column
+	margin: 15px 0
+
+.logo-footer
+	width: 125px
+	height: auto
+	+ p
+		color: #666
+		padding: 0
+		margin-bottom: 57px
+		margin-top: 15px
+		font-size: 14px
+
+.footer-social
+	margin-top: 38px
+	.soc
+		li
+			display: inline-block
+			margin: 3px
+			a
+				color: #ABABAB
+				margin-bottom: 0
+				transition: color .5s ease, background-color .5s ease
+				&:hover
+					color: rgba(#fff, .8)
+
+.footer-menu
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li.active
+			a
+				color: $accent
+				&::before
+					color: $accent
+		a
+			color: #979797
+			transition: color .5s ease
+			display: inline-block
+			padding: 3.5px 0
+			text-decoration: underline
+			padding-left: 25px
+			position: relative
+			&:hover, &:focus
+				color: $accent
+				&::before
+					color: $accent
+			&::before
+				position: absolute
+				font-family: fontawesome
+				content: "\f219"
+				left: 0
+				font-size: 12px
+				color: #fff
+				transition: color .5s ease
+				top: 6px
+.footer-addr
+	position: relative
+	font-size: 15px
+	padding-left: 25px
+	margin: 0  0 20px
+	.fas, .far
+		display: inline-block
+		position: absolute
+		left: 0
+		top: 5px
+		font-size: 18px
+		color: #555
+	span
+		font-family: firasans, sans-serif
+		font-size: 26px
+		padding-top: 30px
+		display: block
+		white-space: nowrap
+		.fas
+			top: 40px
+			font-size: 20px
+			left: 5px
+
+.map
+	min-height: 200px
+	opacity: .7
+	transition: opacity .5s ease
+	&:hover
+		opacity: 1
 
 .text-center
 	text-align: center
