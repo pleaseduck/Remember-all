@@ -41,6 +41,10 @@ body
 .h1, .h2, .h3, .h4, .h5, .h6
 	line-height: 1.4
 	text-transform: uppercase
+
+.text-center
+	text-align: center
+
 .button
 	display: inline-block
 	border: none
@@ -571,6 +575,69 @@ select
 	.button
 		margin-top: 40px
 
+// Отзывы
+
+.reviews
+	text-align: center
+.owl-dots
+	width: 100%
+	text-align: center
+	margin-top: 60px
+	.owl-dot
+		width: 8px
+		height: 8px
+		background-color: #fff
+		margin-right: 7px
+		border-radius: 10em
+		display: inline-block
+		transition: all .5 ease
+		&:last-of-type
+			margin-right: 0
+		&.active
+			background-color: $accent
+			transform: scale(1.3)
+
+.review
+	margin-top: 20px
+	&-header
+		font-family: "Times New Roman", serif
+		font-size: 30px
+		font-style: italic
+		font-weight: bold
+	&-date
+		font-family: "Times New Roman", serif
+		font-style: italic
+		font-size: 15px
+		color: #888
+	&-stars
+		margin: 20px
+		margin-bottom: 30px
+		font-size: 14px
+		color: $accent
+		.fas
+			margin: 0 2px
+	&-text
+		color: #95989A
+
+.quotes
+	position: absolute
+	width: 100%
+	&::after, &::before
+		content: ",,"
+		position: absolute
+		font-size: 56px
+		color: $accent
+		font-family: "Times New Roman", serif
+		font-weight: bold
+		line-height: 0
+		display: block
+	&::before
+		transform: rotate(180deg)
+		left: -60px
+		top: 220px
+	&::after
+		top: 180px
+		right: -60px
 
 
 
