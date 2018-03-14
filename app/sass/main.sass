@@ -336,6 +336,8 @@ $colors: $blue-color, $red-color, $accent
 		background-color: nth($colors, $i)
 
 .carousel-services
+	.owl-dots
+		display: none
 	&-item
 		color: #fff
 		font-size: 18px
@@ -640,6 +642,44 @@ select
 		right: -60px
 
 
+
+// Партнеры
+.s-partners
+	&::before
+		background-color: #fff
+	.h2
+
+.partners
+	.partner
+		height: 100%
+		display: flex
+		margin: auto
+	.owl-stage
+		display: flex
+		.owl-item
+			margin-top: 30px
+			img
+				max-width: 100%
+				width: auto
+				display: block
+				margin: auto
+	.owl-nav
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 2
+		> div
+			background: transparent
+			color: #999
+			top: 25px
+			transition: opacity .5s ease
+			padding: 0 10px
+			&:hover
+				opacity: .6
+		.owl-prev
+			left: -60px
+		.owl-next
+			right: -60px
 
 
 .text-center

@@ -70,6 +70,28 @@ $(function() {
    autoHeight: true
  });
 
+ $('.partners').owlCarousel({
+   loop: true,
+   smartSpeed: 700,
+   nav: true,
+   dots: false,
+   navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+   responsiveClass: true,
+   responsive: {
+     0: {
+       items: 1
+     },
+     768: {
+       items: 2
+     },
+     992: {
+       items: 3
+     },
+     1200: {
+       items: 4
+     }
+ }
+ });
 $("form.callback").submit(function() { //Change
   var th = $(this);
   $.ajax({
